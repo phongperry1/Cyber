@@ -1,0 +1,708 @@
+
+
+html {
+    color: white;
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.title {
+    text-align: center;
+}
+
+.title p:first-of-type {
+    font-size: 1.4rem;
+    color: #e62b4a;
+    font-weight: 300;
+}
+
+.title h2 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.title p:last-of-type {
+    font-size: 1.6rem;
+    color: #888888;
+    font-weight: 700;
+    margin-top: 20px;
+}
+/*
+px: tuyet doi
+%, rem: tuong doi 
+rem phu thuoc vao font size cua the html */
+
+header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 26px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header:hover .header-logo {
+    color: red;
+}
+
+header:hover .header-logo i {
+    color: white;
+}
+
+header:hover {
+    background-color: black;
+}
+
+.header-content ul {
+    list-style: none;
+}
+
+.header-content li {
+    display: inline;
+    padding: 0 26px;
+}
+
+.header-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.header-content li a {
+    text-transform: uppercase;
+    font-size: 17px;
+    transition: all 0.5s;
+}
+
+.header-content li a:hover {
+    color: #e62b4a;
+}
+
+.header-content li .active a {
+    color: #e62b4a;
+}
+
+.header-content {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel {
+    background-image: url(./image-video/home_slider.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 814px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-content {
+    text-align: center;
+    color: white;
+}
+
+.carousel-content p {
+    font-size: 2.5rem;
+    padding-top: 5rem;
+   
+}
+
+.carousel-content h1 {
+    font-size: 7.5rem;
+    line-height: 9rem;
+}
+
+.carousel-content button {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    padding: 1.5rem 2.5rem;
+    background-color: #e62b4a;
+    color: white;
+    border: 1px solid #e62b4a;
+    cursor: pointer;
+    transition: all 0.5s;
+  
+}
+
+.carousel-content button:hover {
+    background-color: #af2239;
+}
+
+.carousel-scroll i{
+    margin-top: 5rem;
+    font-size: 3rem;
+    animation: arrowDown 0.5s linear 0s infinite;
+}
+
+@keyframes arrowDown{
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+}
+
+
+
+.service {
+    text-align: center;
+    padding: 90px 0;
+    background-color: black;
+    color: white;
+}
+
+.service_title {
+    color: #ff6f61; 
+}
+
+.service_content {
+    width: 75%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    color: gray;
+}
+
+.service_slider {
+    display: flex !important;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.slick-track {
+    display: flex !important;
+}
+
+.slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    margin: 0 10px;
+}
+
+.service_slider .item {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px; /* Điều chỉnh chiều rộng của mỗi slide */
+    height: 300px; /* Điều chỉnh chiều cao của mỗi slide */
+    box-sizing: border-box;
+    margin: 0 10px; /* Khoảng cách giữa các slide */
+}
+.service_slider .item i {
+    font-size: 3rem;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+/* Tùy chỉnh dấu chấm điều hướng */
+.slick-dots {
+    text-align: center;
+    margin-top: 20px;
+    list-style: none; /* Loại bỏ kiểu danh sách */
+    padding: 0; /* Đảm bảo không có padding mặc định */
+}
+
+/* Thay đổi kích thước của các dấu chấm */
+.slick-dots li {
+    bottom: 30px;
+    width: 30px; /* Điều chỉnh kích thước chiều rộng của dấu chấm */
+    height: 30px; /* Điều chỉnh kích thước chiều cao của dấu chấm */
+    margin: 0 5px; /* Khoảng cách giữa các dấu chấm */
+    display: inline-block; /* Đảm bảo các dấu chấm hiển thị trên cùng một dòng */
+    position: relative; /* Đảm bảo các dấu chấm được căn chỉnh chính xác */
+}
+
+/* Thay đổi kích thước và nội dung của dấu chấm */
+.slick-dots li button::before {
+    content: '•'; 
+    font-size: 30px; /* Điều chỉnh kích thước của dấu chấm */
+    color: #888888; /* Màu sắc của dấu chấm */
+    line-height: 30px; /* Đảm bảo dấu chấm được căn giữa theo chiều dọc */
+    display: inline-block; /* Đảm bảo rằng ký tự '•' hiển thị như một khối */
+    width: 30px; /* Đảm bảo chiều rộng khớp với kích thước dấu chấm */
+    height: 30px; /* Đảm bảo chiều cao khớp với kích thước dấu chấm */
+    text-align: center; /* Căn giữa ký tự trong dấu chấm */
+}
+
+/* Màu sắc khi trạng thái active */
+.slick-dots li.slick-active button::before {
+    color: #ff6f61; /* Màu sắc của dấu chấm khi đang active */
+}
+
+
+
+
+
+.showcase__content {
+    text-align: center;
+    color: black;
+}
+
+.showcase__desc {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    word-spacing: 1rem;
+}
+
+.showcase__title {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.showcase__sub {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.clr-dark {
+    color: black;
+}
+
+.clr-white {
+    color: white;
+}
+
+.clr-danger {
+    color:#e62b4a
+}
+
+.clr-gray {
+    color: #D0c7c8;
+}
+
+.showcase__gallery {
+    display: grid;
+    /* grid-template-columns: 100px 200px 300px; */
+    /* grid-template-columns: calc(100% / 3)  calc(100% / 3)  calc(100% / 3); */
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+   
+}
+
+.gallery__item img {
+    height: 50.8rem;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(50%);
+}
+
+.blog__desc {
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    word-spacing: 1rem;
+}
+
+.blog__title {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.blog__sub {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.blog__content {
+    text-align: center;
+    color: black;
+}
+
+.blog__list-metro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 40rem) ;
+}
+
+.metro-item-1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    
+}
+
+.metro-item-10 {
+    grid-column: 3/5;
+    grid-row: 3/5
+}
+
+.metro-item-1 img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.metro-item-8 img {
+    height: 132%;
+    
+    
+}
+
+.metro-item-9 img {
+    height: 132%;
+}
+
+
+.blog {
+    padding-bottom: 100px;
+    padding-top: 100px;
+    
+}
+
+
+.blog__metro-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog__metro-item img {
+    filter: grayscale(70%) contrast(100%);
+    opacity: 0.5;
+    transition: all 0.3s linear;
+    will-change: opacity, filter;
+}
+
+.blog__metro-item:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+
+}
+
+.gallery__item {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+
+.gallery__item .item__overlay {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+    will-change: background-color;
+    
+
+}
+
+.gallery__item:hover .item__overlay {
+    background-color: rgba(255, 0, 0, 0.5);
+   
+    
+}
+
+
+
+.overlay__icon .overlay__zom {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.overlay__zom {
+    color: black;
+    background-color: white;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: none;
+    font-size: 2rem;
+    transition: all 0.3s linear;
+    will-change: background-color;
+    
+}
+ 
+.overlay__icon-1 {
+    position: relative;
+    bottom: 1.5rem;
+}
+
+
+.overlay__zom:hover {
+    color: white;
+    background-color: black;
+}
+
+
+
+.overlay__text {
+    position: relative;
+    left: 2rem;
+    top: 40rem;
+    
+}
+
+.overlay__text h3 {
+    margin-bottom: 0;
+    
+
+}
+
+.overlay__text, .overlay__icon {
+   
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: all 0.3s linear;
+    will-change: color, background-color, transform;
+}
+
+.gallery__item:hover .overlay__text, 
+.gallery__item:hover .overlay__icon  {
+    opacity: 1;
+    transform: translateY(0);
+    
+   
+}
+
+.number {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    background-color: black;
+}
+
+.numbers__wrapper {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.number__item {
+    width: 200px;
+}
+
+.number__item .num {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.number__item .text {
+    font-size: 2rem;
+}
+
+.experience {
+    padding: 10rem 0;
+    text-align: center;
+    background-image: url(./image-video/bussiness_img_1.jpg);
+    background-attachment: fixed;
+}
+
+.experience__video {
+    margin: 0 4rem;
+}
+
+.experience__video video {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.contact__container {
+    text-align: center;
+    max-width: 120rem;
+    margin: 0 auto;
+   
+}
+.experience__content {
+    display: flex;
+    gap: 1rem;
+}
+
+.experience__content iframe {
+    width: 60%;
+}
+
+.experience__content form {
+    width: 40%;
+    display: flex;
+    gap: 4rem;
+    flex-direction: column;
+}
+
+.experience__content .username,
+.experience__content .email {
+    width: 100%;
+    padding: 1.2rem 1.6rem;
+    font-size: 2rem;
+    border-radius: .6rem;
+    
+
+}
+
+.experience__content .username:focus,
+.experience__content .email:focus {
+    outline: .4rem solid blue;
+    outline-offset: 2px;
+}
+
+.experience__content textarea {
+    resize: vertical;
+    min-height: 8rem;
+    max-height: 30rem;
+    padding: 1.6rem 1.2rem;
+    font-size: 2rem;
+}
+
+.experience__content button {
+    background-color: black;
+    border: none;
+    padding: 2rem 3rem;
+    color: white;
+    font-size: 2rem;
+    transition: background-color 0.3s linear;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+
+}
+
+
+.experience__content button:hover {
+    background-color:  #e62b4a ;
+}
+
+footer {
+    background-color: black;
+    margin-top: 10rem;
+}
+
+
+.footer__content {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.footer__content a {
+    width: 54px;
+    height: 54px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 54px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.5s linear;
+}
+
+.footer__content a:hover {
+    background-color: #e62b4a;
+}
+
+
+.showcase h2.showcase__title {
+    background: linear-gradient(45deg, #09009f, #00ff95 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.backToTop {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 4px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    color: #fff;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+    visibility: hidden;
+
+    /* opacity, Ẩn, tương tác được, có trên giao diện
+    visibility, Ẩn, không tương tác được, có trên giao diện
+    display:none : không có trên giao diện và không tương tác được  */
+}
+
+.cd-top--is-visible {
+   
+    visibility: visible;
+}
+
+
+
+
+
+.carousel__desc:hover + .carousel__title {
+    color: red;
+
+}
+
+.item {
+    position: relative;
+}
+
+
+
+
+.item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .4rem;
+    height: 0%;
+    background-color: red;
+    transition: all 0.3s linear;
+   
+}
+
+.item:hover::after {
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
